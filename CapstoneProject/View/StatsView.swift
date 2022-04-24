@@ -7,9 +7,12 @@ struct statsView: View {
        
      
             
-NavigationView{
+
       
-            VStack{
+        VStack(){
+            
+            
+           
                 
               
             
@@ -17,17 +20,12 @@ NavigationView{
                 HeaderView()
                 
                
+     
+                titleView(title: "Your Progress")
+        
                 
-                NavigationLink(
-                                 destination: HomeView(),
-                                 label: {
-                                     titleView()
-                                 })
-                
-             
-                
-             
-                
+            
+     
                 ScrollView(showsIndicators: false){
                     
                     personalView()
@@ -46,16 +44,32 @@ NavigationView{
                         HStack{
                         
                         averageView()
-                                    .padding(.top,5)
+                                .padding(.top,5)
+                            
+                                    
                                 
                         
                         cardStatsView()
-                                
                                 .padding(.top,5)
+                            
+                                
+                              
                                 
                         }
                         
                         .frame(width: 760)
+                        
+                        HStack{
+                        
+                        topClassView(classes: rankedClasses)
+                                .padding(.top,10)
+                        topClassView(classes: rankedClasses)
+                                .padding(.top,10)
+                                
+                                
+                        }
+                            
+                            
                         
                         
                     }
@@ -63,9 +77,7 @@ NavigationView{
                     
        
                     
-                topClassView(classes: rankedClasses)
-                        .padding(.top,5)
-                    
+             
                 
                
                 
@@ -85,22 +97,20 @@ NavigationView{
                 
               
                 }
-                .ignoresSafeArea()
-                .frame(width: 400, height: 673)
-                .ignoresSafeArea()
-                .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 10)
                 
+                .frame(width: 400, height: 600)
+                
+              
             
                 
                 
                 
                 Spacer()
-            }
-            .offset(y:-42)
+        
     
         }
-.navigationBarTitle("")
-.navigationBarHidden(true)
+        
+
         
         
         

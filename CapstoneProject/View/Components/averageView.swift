@@ -26,7 +26,7 @@ struct averageView: View {
                     Text("Change Units")
                      
                        
-                        .font(.system(size: 13))
+                        .font(.system(size: 12))
                         .foregroundColor(.white)
                         .padding(.vertical,5)
                         .padding(.horizontal, 10)
@@ -46,12 +46,13 @@ struct averageView: View {
                     Text("Last 7 Days")
                      
                         .foregroundColor(.gray)
+                        .font(.system(size: 12))
                     
                     Image(systemName: "arrowtriangle.down.fill")
                         .resizable()
                         .foregroundColor(.gray)
-                        .frame(width: 7, height: 7)
-                        .padding(.top,3)
+                        .frame(width: 5, height: 5)
+                        .padding(.top,1)
                         
                  
                     
@@ -80,12 +81,12 @@ struct averageView: View {
                 
                 
                 Text("47 Minutes")
-                    .font(.system(size: 40))
+                    .font(.system(size: 25))
                 .bold()
                 
                 
                 Text("Your Average Per Session")
-                    .font(.system(size: 15))
+                    .font(.system(size: 12))
                     .foregroundColor(.gray)
                     
                 
@@ -97,7 +98,7 @@ struct averageView: View {
                         
                         HStack(){
                         Image(systemName: "crown.fill")
-                            .font(.system(size: 30))
+                            .font(.system(size: 26))
                             .foregroundColor(.yellow)
                             
                             
@@ -105,16 +106,15 @@ struct averageView: View {
 
                    
                         Text("Top Class:")
-                           .font(.system(size: 15))
-                           .bold()
+                           .font(.system(size: 14))
+                           
                            .padding(.top,1)
                                 
                                 
                                 
                                 
                                      Text("Kickboxing")
-                                        .font(.system(size: 15))
-                                        .bold()
+                                       .font(.system(size: 12))
                                         .foregroundColor(.gray)
                 
                                         
@@ -128,7 +128,7 @@ struct averageView: View {
                             
                        
                     }
-                    .frame(width: 165, height: 70)
+                    .frame(width: 165, height: 60)
                     .background(
                     RoundedRectangle(
                     cornerRadius: 15)
@@ -150,16 +150,16 @@ struct averageView: View {
 
                    
                         Text("Time Of Day")
-                           .font(.system(size: 15))
-                           .bold()
+                           .font(.system(size: 14))
+                         
                            .padding(.top,1)
                                 
                                 
                                 
                                 
                                      Text("Morning")
-                                        .font(.system(size: 15))
-                                        .bold()
+                                        .font(.system(size: 12))
+                                       
                                         .foregroundColor(.gray)
                 
                                         
@@ -173,7 +173,7 @@ struct averageView: View {
                             
                        
                     }
-                    .frame(width: 165, height: 70)
+                    .frame(width: 165, height: 60)
                     .background(
                     RoundedRectangle(
                     cornerRadius: 15)
@@ -197,19 +197,19 @@ struct averageView: View {
               
             }
                 
-                Spacer()
+              
              
                 
                 
                 
             }
-        .frame(width: 360, height: 240)
+        .frame(width: 360, height: 190)
         .background(
         RoundedRectangle(
         cornerRadius: 15)
         
             .fill(.white)
-           // .shadow(color: Color.black.opacity(0.1), radius: 20, x: 0, y: 10)
+            .shadow(color: Color.black.opacity(0.1), radius: 20, x: 0, y: 10)
         )
         
         

@@ -12,15 +12,14 @@ struct attendanceView: View {
     
     var body: some View {
         
-        VStack(spacing: 5){
+        VStack(spacing: 2){
       
             HStack{
     
            
                 
                 Text("Your Attendance")
-                    .font(.system(size: 20))
-                    .bold()
+                    .font(.system(size: 17))
                     .padding(.top, 15)
                     .padding(.leading, 15)
                 
@@ -28,18 +27,37 @@ struct attendanceView: View {
                 Spacer()
                 
                 
-                Image(systemName: "arrow.up.right")
-                    .font(.system(size: 20))
-                    .padding(.top, 10)
-                    .padding(.trailing, 20)
-                    .foregroundColor(.gray)
-                   
+               
+              
+                    
+                  
+                    Button{
+                        
+                        
+                
+                    } label: {
+                        Text("Change Units")
+                         
+                            .font(.system(size: 10))
+                            .foregroundColor(.white)
+                            .padding(.vertical,5)
+                            .padding(.horizontal, 10)
+                            .background(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.gray)
+                                    .opacity(0.7))
+                    }
+                    
+                .padding(.trailing, 17)
+                .padding(.top,15)
+               
+                }
                 
             
                 
              
                 
-            }
+            
             
             HStack(){
                 
@@ -47,11 +65,12 @@ struct attendanceView: View {
                  
                     .padding(.leading, 15)
                     .foregroundColor(.gray)
+                    .font(.system(size: 13))
                 
                 Image(systemName: "arrowtriangle.down.fill")
                     .resizable()
                     .foregroundColor(.gray)
-                    .frame(width: 7, height: 7)
+                    .frame(width: 5, height: 5)
                     .padding(.top,3)
                     
                     
@@ -80,39 +99,21 @@ struct attendanceView: View {
            
                 
                 Text("315 Minutes")
-                    .font(.system(size: 20))
-                    .bold()
+                    .font(.system(size: 17))
+                    
                     .padding(.leading, 15)
                 
             
                 
                 Spacer()
                 
-                Button{
-                    
-                    
-            
-                } label: {
-                    Text("Change Units")
-                     
-                        .font(.system(size: 13))
-                        .foregroundColor(.white)
-                        .padding(.vertical,5)
-                        .padding(.horizontal, 10)
-                        .background(
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(Color.gray)
-                                .opacity(0.7))
-                }
-                
-                .padding(.trailing, 17)
+              
                 
             }
             
             
             
-            Spacer()
-                .frame(height: 30)
+      
          
             
             graphView(downloads: weekDownloads)
@@ -134,9 +135,11 @@ struct attendanceView: View {
             
         }
         
-        .frame(width: 360, height: 300)
+        .frame(width: 360, height: 250)
         .background(Color.white)
         .cornerRadius(15)
+        .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 10)
+        
      
         
     }

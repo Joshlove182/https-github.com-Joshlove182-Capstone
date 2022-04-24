@@ -21,7 +21,7 @@ struct cardClassView: View {
                 //Colored Bars
                 
             }
-                .frame(width: 5, height: 40)
+                .frame(width: 5, height: 30)
                 .background(color)
                 .cornerRadius(10)
                 .padding(2)
@@ -33,14 +33,14 @@ struct cardClassView: View {
                 
                 Text(eventname)
                     .bold()
-                    .font(.system(size: 20))
+                    .font(.system(size: 15))
                     .foregroundColor(.black)
                 Text(time)
                     .font(.system(size: 12))
                     .foregroundColor(.gray)
                 
             }
-            .frame(width: 200, height: 40, alignment: .leading)
+            .frame(width: 200, height: 30, alignment: .leading)
            
     }
 }

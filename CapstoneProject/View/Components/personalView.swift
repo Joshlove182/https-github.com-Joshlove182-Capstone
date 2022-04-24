@@ -59,7 +59,7 @@ struct personalView: View {
                 
                 Image("Image2")
                     .resizable()
-                    .frame(width: 100, height: 100)
+                    .frame(width: 70 , height: 70)
                             .foregroundColor(.primary)
                             .padding(1)
                             .background(Color.white)
@@ -75,7 +75,7 @@ struct personalView: View {
                 
                 
                 Text("Joshua Love")
-                    .font(.system(size: 40))
+                    .font(.system(size: 20))
                 .bold()
                 
               
@@ -84,7 +84,7 @@ struct personalView: View {
             
             
             Text("All Your Progress Here!")
-                .font(.system(size: 15))
+                .font(.system(size: 12))
                 .foregroundColor(.gray)
                 
             
@@ -102,15 +102,15 @@ struct personalView: View {
 
                    
                         Text("Member:")
-                           .font(.system(size: 15))
-                           .bold()
+                           .font(.system(size: 14))
+                        
                            .padding(.top,1)
                                 
                                 
                                 
                                 
                                      Text("Since 2009")
-                                        .font(.system(size: 15))
+                                        .font(.system(size: 12))
                                         .bold()
                                         .foregroundColor(.gray)
                 
@@ -125,7 +125,7 @@ struct personalView: View {
                             
                        
                     }
-                    .frame(width: 165, height: 70)
+                    .frame(width: 165, height: 60)
                     .background(
                     RoundedRectangle(
                     cornerRadius: 15)
@@ -137,7 +137,7 @@ struct personalView: View {
                 VStack {
                     VStack (){
                         
-                        HStack(spacing:15){
+                        HStack(spacing:10){
                         Image(systemName: "house.circle.fill")
                             .font(.system(size: 32))
                             .foregroundColor(.yellow)
@@ -147,15 +147,15 @@ struct personalView: View {
 
                    
                         Text("Academy:")
-                           .font(.system(size: 15))
-                           .bold()
+                           .font(.system(size: 14))
+                        
                            .padding(.top,1)
                                 
                                 
                                 
                                 
                                      Text("Basildon")
-                                        .font(.system(size: 15))
+                                        .font(.system(size: 12))
                                         .bold()
                                         .foregroundColor(.gray)
                 
@@ -170,7 +170,7 @@ struct personalView: View {
                             
                        
                     }
-                    .frame(width: 165, height: 70)
+                    .frame(width: 165, height: 60)
                     .background(
                     RoundedRectangle(
                     cornerRadius: 15)
@@ -194,19 +194,20 @@ struct personalView: View {
               
             }
                 
-                Spacer()
+             
              
                 
                 
                 
             }
-        .frame(width: 360, height: 320)
+        .frame(width: 360, height: 250)
         .background(
         RoundedRectangle(
         cornerRadius: 15)
         
             .fill(.white)
-           // .shadow(color: Color.black.opacity(0.1), radius: 20, x: 0, y: 10)
+            .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 10)
+            
         )
         
         

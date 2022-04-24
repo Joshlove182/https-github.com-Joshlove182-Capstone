@@ -22,7 +22,7 @@ struct mainCardView: View {
                 VStack(alignment: .leading,spacing: 8){
                     
                     
-                    Spacer().frame(width: 15, height: 20)
+                    Spacer().frame(width: 15, height: 25)
                     
                     HStack {
                         
@@ -36,8 +36,7 @@ struct mainCardView: View {
                                 
                                 
                             Text(Date)
-                                .bold()
-                                .font(.system(size: 30))
+                                .font(.system(size: 25))
                                 
                             
                             
@@ -94,7 +93,7 @@ struct mainCardView: View {
         }
         
         
-        .frame(width: 360, height: 250)
+        .frame(width: 360, height: 220)
         .background(Color.white)
     .cornerRadius(10)
    
@@ -113,7 +112,7 @@ struct mainCardView: View {
 
 struct mainCardView_Previews: PreviewProvider {
     static var previews: some View {
-        mainCardView(Day: "", Date: "")
+        mainCardView(Day: "Wednesday", Date: "14th August")
     }
     
     

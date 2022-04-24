@@ -12,7 +12,7 @@ struct Test: View {
             
             HeaderView()
          
-            
+            titleView(title: "Your Timetable")
             
             ZStack{
                 

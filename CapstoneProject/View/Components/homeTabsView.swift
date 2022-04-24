@@ -26,14 +26,21 @@ var color: Color
                 
                 Spacer().frame(height: 30)
                 
+                
+                
                 HStack {
                     
-                    Spacer().frame(width: 20)
+             
                     
                     Text(Title)
-                        .bold()
+                        
                         .foregroundColor(.black)
-                    .font(.system(size: 20))
+                        .bold()
+                        .font(.system(size: 16))
+                        .padding(.top,5)
+                        .padding(.leading,11)
+                       
+                  
                     
                     Spacer()
                     
@@ -45,26 +52,37 @@ var color: Color
                 
                 
                 
+                
+                
                 VStack {
                     
+                    
+                    
                     HStack(spacing: 0){
+                        Spacer().frame(width: 15)
+                        VStack {
+                            Text(description)
+                                .foregroundColor(.gray)
+                            .font(.system(size: 12))
+                            
+                        }
+                        .frame(width: 100, height: 30, alignment: .leading)
+                       
+                        .padding(.bottom,25)
+                            
                         
-                        Spacer().frame(width: 20, height: 30)
+                     
+                            
+                        Spacer()
                         
                         
                         Image(systemName: Icon)
                             .font(.system(size: 30))
                             .foregroundColor(color)
+                            .padding(.trailing,15)
+                            .padding(.top,20)
                     
-                        
-                            Text(description)
-                                .bold()
-                            .foregroundColor(.gray)
-                            .frame(width: 100 , height: 50)
-                            .font(.system(size: 12))
-                            
-                            Spacer()
-                            
+                      
                          
                         
                     
@@ -83,10 +101,10 @@ var color: Color
             
         }
         
-        .frame(width: 170, height: 120)
+        .frame(width: 170, height: 100)
         .background(Color.white)
         .cornerRadius(15)
-        .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 10)
+        .shadow(color: Color.black.opacity(0.1), radius: 20, x: 0, y: 10)
         
         
         

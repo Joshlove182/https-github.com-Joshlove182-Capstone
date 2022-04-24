@@ -32,9 +32,9 @@ struct cardStatsView: View {
                     Text("Change Units")
                      
                        
-                        .font(.system(size: 13))
+                        .font(.system(size: 12))
                         .foregroundColor(.white)
-                        .padding(.vertical,6)
+                        .padding(.vertical,5)
                         .padding(.horizontal, 10)
                         .background(
                             RoundedRectangle(cornerRadius: 10)
@@ -51,12 +51,13 @@ struct cardStatsView: View {
                     Text("Last 7 Days")
                      
                         .foregroundColor(.gray)
+                        .font(.system(size: 12))
                     
                     Image(systemName: "arrowtriangle.down.fill")
                         .resizable()
                         .foregroundColor(.gray)
-                        .frame(width: 7, height: 7)
-                        .padding(.top,3)
+                        .frame(width: 5, height: 5)
+                        .padding(.top,1)
                         
                     
                     
@@ -72,26 +73,26 @@ struct cardStatsView: View {
             
             VStack {
                 Text("5.3 Hours")
-                    .font(.system(size: 40))
+                    .font(.system(size: 25))
                 .bold()
                 
                 
                 Text("Attended This Week")
-                    .font(.system(size: 15))
+                    .font(.system(size: 12))
                     .foregroundColor(.gray)
                     
                 
             }
             
             
-           Spacer()
+   
             
             
             HStack{
                 
                 
                 individualCard(freq: "7", icon: "checkmark.square.fill", desc: "Sessions Attended", color: .green)
-                individualCard(freq: "1", icon: "xmark.square.fill", desc: "Sessions Missed", color: .red)
+                individualCard(freq: "1", icon: "xmark.square.fill", desc: "Sessions \nMissed", color: .red)
                     
             }
                 
@@ -101,13 +102,13 @@ struct cardStatsView: View {
                 
                 
             }
-        .frame(width: 360, height: 240)
+        .frame(width: 360, height: 190)
         .background(
         RoundedRectangle(
         cornerRadius: 15)
         
             .fill(.white)
-           // .shadow(color: Color.black.opacity(0.1), radius: 20, x: 0, y: 10)
+           .shadow(color: Color.black.opacity(0.1), radius: 20, x: 0, y: 10)
         )
         
         

@@ -17,15 +17,15 @@ struct topClassView: View {
             VStack(spacing: 10){
                 
                 
-                VStack(spacing:5){
+                VStack(spacing:2){
                 
                 HStack{
         
                
                     
                     Text("Your Classes")
-                        .font(.system(size: 20))
-                        .bold()
+                        .font(.system(size: 17))
+                       
                         .padding(.top, 15)
                         .padding(.leading, 15)
                     
@@ -33,7 +33,7 @@ struct topClassView: View {
                     Spacer()
                     
                     
-                    Image(systemName: "arrow.up.right")
+                    Image(systemName: "arrow.up.and.down")
                         .font(.system(size: 20))
                         .padding(.top, 10)
                         .padding(.trailing, 20)
@@ -112,10 +112,12 @@ struct topClassView: View {
                             
                         
                         Text("\(classData.classname)")
-                                .bold()
+                                .font(.system(size: 16))
+                                
                         
                         Text("\(classData.percentage)% of Classes Attended.")
                                 .foregroundColor(.gray)
+                                .font(.system(size: 13))
                         
                         }
                         
@@ -132,7 +134,7 @@ struct topClassView: View {
                     )
                     
                         .fill(.white))
-                        .shadow(color: Color.black.opacity(0.05), radius: 20, x: 0, y: 10)
+                      
                     
                     
                     
@@ -146,16 +148,25 @@ struct topClassView: View {
                 Spacer()
                 
             }
-            .frame(width: 360, height: 285)
+            .frame(width: 360, height: 270)
+         
+            
             .background(
             
             RoundedRectangle(cornerRadius: 15)
                 .fill(.white)
+                
+                .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 10)
             )
             
             
         }
+      
+        
+        
+        
     }
+    
 }
 
 struct topClassView_Previews: PreviewProvider {

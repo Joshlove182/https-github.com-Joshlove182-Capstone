@@ -22,6 +22,11 @@
 		6567B3862809B18400AC0C1C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567B3852809B18400AC0C1C /* HeaderView.swift */; };
 		6567B3882809C33300AC0C1C /* mainCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567B3872809C33300AC0C1C /* mainCardView.swift */; };
 		6567B38A2809C8E600AC0C1C /* cardClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567B3892809C8E600AC0C1C /* cardClassView.swift */; };
+		656D4C4F281439C70059BBBE /* summaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656D4C4E281439C70059BBBE /* summaryView.swift */; };
+		656D4C51281448850059BBBE /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656D4C50281448850059BBBE /* TestView.swift */; };
+		656D4C53281453F30059BBBE /* upcomingClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656D4C52281453F20059BBBE /* upcomingClassView.swift */; };
+		656D4C552814684F0059BBBE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656D4C542814684F0059BBBE /* MainView.swift */; };
+		656D4C572815512A0059BBBE /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656D4C562815512A0059BBBE /* LibraryView.swift */; };
 		65BF52632811753300C1FD2C /* attendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BF52622811753300C1FD2C /* attendanceView.swift */; };
 		65C530312809A7BA001EAC85 /* CapstoneProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C530302809A7BA001EAC85 /* CapstoneProjectApp.swift */; };
 		65C530332809A7BA001EAC85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C530322809A7BA001EAC85 /* ContentView.swift */; };
@@ -67,6 +72,11 @@
 		6567B3852809B18400AC0C1C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		6567B3872809C33300AC0C1C /* mainCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainCardView.swift; sourceTree = "<group>"; };
 		6567B3892809C8E600AC0C1C /* cardClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardClassView.swift; sourceTree = "<group>"; };
+		656D4C4E281439C70059BBBE /* summaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = summaryView.swift; sourceTree = "<group>"; };
+		656D4C50281448850059BBBE /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		656D4C52281453F20059BBBE /* upcomingClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = upcomingClassView.swift; sourceTree = "<group>"; };
+		656D4C542814684F0059BBBE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		656D4C562815512A0059BBBE /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		65BF52622811753300C1FD2C /* attendanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = attendanceView.swift; sourceTree = "<group>"; };
 		65C5302D2809A7BA001EAC85 /* CapstoneProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapstoneProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C530302809A7BA001EAC85 /* CapstoneProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapstoneProjectApp.swift; sourceTree = "<group>"; };
@@ -129,7 +139,9 @@
 			isa = PBXGroup;
 			children = (
 				6511C220280C1F1A00B3D436 /* titleView.swift */,
+				656D4C52281453F20059BBBE /* upcomingClassView.swift */,
 				6567B3852809B18400AC0C1C /* HeaderView.swift */,
+				656D4C4E281439C70059BBBE /* summaryView.swift */,
 				6567B3872809C33300AC0C1C /* mainCardView.swift */,
 				6567B3892809C8E600AC0C1C /* cardClassView.swift */,
 				6503521B2809F70C00EED2AF /* homeTabsView.swift */,
@@ -205,9 +217,12 @@
 		65C530582809A7EE001EAC85 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6511C21E280C1E2500B3D436 /* StatsView.swift */,
+				656D4C542814684F0059BBBE /* MainView.swift */,
 				6567B3832809B14600AC0C1C /* HomeView.swift */,
+				6511C21E280C1E2500B3D436 /* StatsView.swift */,
 				65499BE4280C8B9100E75178 /* Home.swift */,
+				656D4C50281448850059BBBE /* TestView.swift */,
+				656D4C562815512A0059BBBE /* LibraryView.swift */,
 				6567B3802809AF2100AC0C1C /* Components */,
 			);
 			path = View;
@@ -348,19 +363,24 @@
 				65CCFD772811C699003E5A66 /* individualCard.swift in Sources */,
 				65000F3F2812C56800535B5B /* averageView.swift in Sources */,
 				65000F3D2811FD8D00535B5B /* classData.swift in Sources */,
+				656D4C53281453F30059BBBE /* upcomingClassView.swift in Sources */,
 				6567B3842809B14600AC0C1C /* HomeView.swift in Sources */,
 				65CCFD752811B65E003E5A66 /* cardStatsView.swift in Sources */,
 				6511C21F280C1E2500B3D436 /* StatsView.swift in Sources */,
 				65000F3B2811FCE800535B5B /* topClassView.swift in Sources */,
+				656D4C4F281439C70059BBBE /* summaryView.swift in Sources */,
 				6567B38A2809C8E600AC0C1C /* cardClassView.swift in Sources */,
 				652C740B28118E9100F79989 /* downloads.swift in Sources */,
+				656D4C552814684F0059BBBE /* MainView.swift in Sources */,
 				65C530332809A7BA001EAC85 /* ContentView.swift in Sources */,
 				65499BE5280C8B9100E75178 /* Home.swift in Sources */,
 				65C530312809A7BA001EAC85 /* CapstoneProjectApp.swift in Sources */,
 				6503521C2809F70C00EED2AF /* homeTabsView.swift in Sources */,
+				656D4C572815512A0059BBBE /* LibraryView.swift in Sources */,
 				652C740D281190A900F79989 /* graphView.swift in Sources */,
 				655B7ECF280C717400CB228C /* task.swift in Sources */,
 				65BF52632811753300C1FD2C /* attendanceView.swift in Sources */,
+				656D4C51281448850059BBBE /* TestView.swift in Sources */,
 				6511C221280C1F1A00B3D436 /* titleView.swift in Sources */,
 				6567B3862809B18400AC0C1C /* HeaderView.swift in Sources */,
 				6567B3882809C33300AC0C1C /* mainCardView.swift in Sources */,
