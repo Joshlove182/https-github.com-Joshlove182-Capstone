@@ -15,13 +15,13 @@ struct cardClassView: View {
         HStack{
             
             
-           Spacer().frame(width: 15, height: 40)
+           Spacer().frame(width: 15, height: 30)
             
             VStack(alignment: .leading){
                 //Colored Bars
                 
             }
-                .frame(width: 5, height: 30)
+                .frame(width: 5, height: 25)
                 .background(color)
                 .cornerRadius(10)
                 .padding(2)
@@ -32,11 +32,11 @@ struct cardClassView: View {
             VStack(alignment: .leading, spacing: 0){
                 
                 Text(eventname)
-                    .bold()
-                    .font(.system(size: 15))
+                    
+                    .font(.system(size: 14))
                     .foregroundColor(.black)
                 Text(time)
-                    .font(.system(size: 12))
+                    .font(.system(size: 11))
                     .foregroundColor(.gray)
                 
             }

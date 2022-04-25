@@ -34,7 +34,7 @@ struct graphView: View {
             
             
         }
-        .frame(width: 340, height: 150)
+        .frame(width: 340, height: 140)
         .animation(.easeOut, value: isDragging)
         
         
@@ -91,7 +91,7 @@ struct graphView: View {
                 let size = proxy.size
                 
                 RoundedRectangle(cornerRadius: 6)
-                    .fill(download.color)
+                    .fill(Color.gray)
                     .frame(height: (download.downloads / getMax()) * (size.height))
                     .opacity(isDragging ? (currentBarID == download.id ? 1: 0.35) : 1)
                     .overlay(
@@ -113,7 +113,7 @@ struct graphView: View {
             }
             
             Text(download.day)
-                .foregroundColor(currentBarID == download.id ? download.color : . gray)
+                .foregroundColor(currentBarID == download.id ? .black : . gray)
             
         }
         

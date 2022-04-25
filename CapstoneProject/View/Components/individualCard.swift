@@ -22,12 +22,12 @@ struct individualCard: View {
                 
                 HStack(){
                 Image(systemName: icon)
-                    .font(.system(size: 30))
+                    .font(.system(size: 25))
                     .foregroundColor(color)
                     
                     
                     Text(freq)
-                        .font(.system(size: 30))
+                        .font(.system(size: 20))
                        
                     .padding(.top, 1)
 
@@ -45,7 +45,7 @@ struct individualCard: View {
                     
                
             }
-            .frame(width: 160, height: 60)
+            .frame(width: 160, height: 50)
             .background(
             RoundedRectangle(
             cornerRadius: 15)

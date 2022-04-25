@@ -14,7 +14,7 @@ struct statsView: View {
             
            
                 
-              
+            Spacer().frame(height:12)
             
             
                 HeaderView()
@@ -99,6 +99,9 @@ struct statsView: View {
                 }
                 
                 .frame(width: 400, height: 600)
+    
+                .shadow(color: Color.black.opacity(0.1), radius: 20, x: 0, y: 10)
+                
                 
               
             

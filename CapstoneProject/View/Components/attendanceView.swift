@@ -19,7 +19,7 @@ struct attendanceView: View {
            
                 
                 Text("Your Attendance")
-                    .font(.system(size: 17))
+                    .font(.system(size: 15))
                     .padding(.top, 15)
                     .padding(.leading, 15)
                 
@@ -65,7 +65,7 @@ struct attendanceView: View {
                  
                     .padding(.leading, 15)
                     .foregroundColor(.gray)
-                    .font(.system(size: 13))
+                    .font(.system(size: 12))
                 
                 Image(systemName: "arrowtriangle.down.fill")
                     .resizable()
@@ -99,7 +99,7 @@ struct attendanceView: View {
            
                 
                 Text("315 Minutes")
-                    .font(.system(size: 17))
+                    .font(.system(size: 16))
                     
                     .padding(.leading, 15)
                 
@@ -135,7 +135,7 @@ struct attendanceView: View {
             
         }
         
-        .frame(width: 360, height: 250)
+        .frame(width: 360, height: 225)
         .background(Color.white)
         .cornerRadius(15)
         .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 10)

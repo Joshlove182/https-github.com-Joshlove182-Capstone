@@ -22,7 +22,7 @@ struct mainCardView: View {
                 VStack(alignment: .leading,spacing: 8){
                     
                     
-                    Spacer().frame(width: 15, height: 25)
+                    Spacer().frame(width: 15, height: 62)
                     
                     HStack {
                         
@@ -32,11 +32,11 @@ struct mainCardView: View {
                             
                             Text(Day)
                                 .bold()
-                                .font(.system(size: 20))
+                                .font(.system(size: 15))
                                 
                                 
                             Text(Date)
-                                .font(.system(size: 25))
+                                .font(.system(size: 20))
                                 
                             
                             
@@ -93,7 +93,7 @@ struct mainCardView: View {
         }
         
         
-        .frame(width: 360, height: 220)
+        .frame(width: 360, height: 180)
         .background(Color.white)
     .cornerRadius(10)
    

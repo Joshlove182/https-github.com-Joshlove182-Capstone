@@ -73,7 +73,7 @@ struct cardStatsView: View {
             
             VStack {
                 Text("5.3 Hours")
-                    .font(.system(size: 25))
+                    .font(.system(size: 20))
                 .bold()
                 
                 
@@ -102,7 +102,7 @@ struct cardStatsView: View {
                 
                 
             }
-        .frame(width: 360, height: 190)
+        .frame(width: 360, height: 170)
         .background(
         RoundedRectangle(
         cornerRadius: 15)

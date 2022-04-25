@@ -59,7 +59,7 @@ struct personalView: View {
                 
                 Image("Image2")
                     .resizable()
-                    .frame(width: 70 , height: 70)
+                    .frame(width: 60 , height: 60)
                             .foregroundColor(.primary)
                             .padding(1)
                             .background(Color.white)
@@ -75,7 +75,7 @@ struct personalView: View {
                 
                 
                 Text("Joshua Love")
-                    .font(.system(size: 20))
+                    .font(.system(size: 15))
                 .bold()
                 
               
@@ -84,7 +84,7 @@ struct personalView: View {
             
             
             Text("All Your Progress Here!")
-                .font(.system(size: 12))
+                .font(.system(size: 11))
                 .foregroundColor(.gray)
                 
             
@@ -94,15 +94,15 @@ struct personalView: View {
                         
                         HStack(spacing: 15){
                         Image(systemName: "clock.badge.checkmark.fill")
-                            .font(.system(size: 30))
-                            .foregroundColor(.yellow)
+                            .font(.system(size: 25))
+                            .foregroundColor(.black)
                             
                             
                             VStack (alignment: .leading){
 
                    
                         Text("Member:")
-                           .font(.system(size: 14))
+                           .font(.system(size: 13))
                         
                            .padding(.top,1)
                                 
@@ -110,7 +110,7 @@ struct personalView: View {
                                 
                                 
                                      Text("Since 2009")
-                                        .font(.system(size: 12))
+                                        .font(.system(size: 11))
                                         .bold()
                                         .foregroundColor(.gray)
                 
@@ -125,7 +125,7 @@ struct personalView: View {
                             
                        
                     }
-                    .frame(width: 165, height: 60)
+                    .frame(width: 165, height: 50)
                     .background(
                     RoundedRectangle(
                     cornerRadius: 15)
@@ -139,15 +139,15 @@ struct personalView: View {
                         
                         HStack(spacing:10){
                         Image(systemName: "house.circle.fill")
-                            .font(.system(size: 32))
-                            .foregroundColor(.yellow)
+                            .font(.system(size: 27))
+                            .foregroundColor(.black)
                             
                             
                             VStack (alignment: .leading){
 
                    
                         Text("Academy:")
-                           .font(.system(size: 14))
+                           .font(.system(size: 13))
                         
                            .padding(.top,1)
                                 
@@ -155,7 +155,7 @@ struct personalView: View {
                                 
                                 
                                      Text("Basildon")
-                                        .font(.system(size: 12))
+                                        .font(.system(size: 11))
                                         .bold()
                                         .foregroundColor(.gray)
                 
@@ -170,7 +170,7 @@ struct personalView: View {
                             
                        
                     }
-                    .frame(width: 165, height: 60)
+                    .frame(width: 165, height: 50)
                     .background(
                     RoundedRectangle(
                     cornerRadius: 15)
@@ -200,7 +200,7 @@ struct personalView: View {
                 
                 
             }
-        .frame(width: 360, height: 250)
+        .frame(width: 360, height: 220)
         .background(
         RoundedRectangle(
         cornerRadius: 15)

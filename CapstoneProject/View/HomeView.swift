@@ -9,12 +9,14 @@ struct HomeView: View {
         VStack(spacing:0){
             
             
-            
+         
             
             
             HeaderView()
             titleView(title:"Your Dashboard")
-          
+            
+        
+              
             
         
                
@@ -47,7 +49,7 @@ struct HomeView: View {
                
                     
                 }
-                .frame(width: 360, height: 245)
+                .frame(width: 360, height: 190)
                 .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 10)
                 
                 
@@ -55,8 +57,9 @@ struct HomeView: View {
             
             }
             
+            Spacer().frame(height:5)
             
-            
+        
             ScrollView(.horizontal, showsIndicators: false){
                 
                 
@@ -81,7 +84,8 @@ struct HomeView: View {
                 
                 
             }
-            .frame(width: 360, height: 140)
+            .frame(width: 360)
+            
             .shadow(color: Color.black.opacity(0.1), radius: 20, x: 0, y: 10)
                 
         
@@ -97,34 +101,46 @@ struct HomeView: View {
             
           
          
-            HStack(spacing: 20){
+            HStack(spacing: 10){
                 Button {}label:{
-                homeTabsView(Title: "Attendance", Icon: "qrcode.viewfinder", description: "Register your\nattendance.", color: .black)
+                homeTabsView(Title: "Attendance", Icon: "qrcode.viewfinder", lineone:  "Register Your",linetwo: "Attendance" ,color: .black)
                 
                 }
                 Button {}label:{
-                homeTabsView(Title: "Book A Session.", Icon: "calendar.badge.clock", description: "New Bookings!\nBook today.", color: .black)
+                    
+                    homeTabsView(Title: "One to One", Icon: "person.2", lineone: "Personally tailored",linetwo: "Training" , color: .black)
                 }
             }
             .frame(width: 360, height: 80)
             Spacer()
-                .frame(height: 25)
+                .frame(height: 20)
             
             
-            VStack{
-                upcomingClassView()
+            
+     
                 
-            }
+            
            
         
           
       
-          
+      
+            VStack{
+                upcomingClassView()
                 
-                Spacer()
+                Spacer().frame(height:25)
                 
-            
-           
+                
+                bookingButton()
+                
+                
+                
+            }
+                
+              
+            Spacer().frame(height: 30)
+                
+     
         
     
         }

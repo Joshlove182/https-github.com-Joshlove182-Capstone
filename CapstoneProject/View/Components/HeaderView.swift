@@ -39,7 +39,7 @@ struct HeaderView: View {
                 
                 Image("Image2")
                     .resizable()
-                    .frame(width: 50, height: 50)
+                    .frame(width: 40, height: 40)
                             .foregroundColor(.primary)
                             .padding(1)
                             .background(Color.white)
@@ -58,7 +58,7 @@ struct HeaderView: View {
                         .font(.system(size: 12))
                     
                     Text(date, formatter: dateFormatter)
-                        .bold()
+                        
                     .font(.system(size: 15))
                 }
                 

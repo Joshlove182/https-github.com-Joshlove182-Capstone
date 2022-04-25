@@ -9,6 +9,7 @@ struct Test: View {
     var body: some View {
         
         VStack {
+            Spacer().frame(height:12)
             
             HeaderView()
          

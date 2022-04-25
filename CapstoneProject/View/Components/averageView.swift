@@ -81,7 +81,7 @@ struct averageView: View {
                 
                 
                 Text("47 Minutes")
-                    .font(.system(size: 25))
+                    .font(.system(size: 20))
                 .bold()
                 
                 
@@ -98,8 +98,8 @@ struct averageView: View {
                         
                         HStack(){
                         Image(systemName: "crown.fill")
-                            .font(.system(size: 26))
-                            .foregroundColor(.yellow)
+                            .font(.system(size: 20))
+                            .foregroundColor(.black)
                             
                             
                             VStack (alignment: .leading){
@@ -128,7 +128,7 @@ struct averageView: View {
                             
                        
                     }
-                    .frame(width: 165, height: 60)
+                    .frame(width: 165, height: 50)
                     .background(
                     RoundedRectangle(
                     cornerRadius: 15)
@@ -142,8 +142,8 @@ struct averageView: View {
                         
                         HStack(){
                         Image(systemName: "sun.min.fill")
-                            .font(.system(size: 30))
-                            .foregroundColor(.yellow)
+                            .font(.system(size: 25))
+                            .foregroundColor(.black)
                             
                             
                             VStack (alignment: .leading){
@@ -173,7 +173,7 @@ struct averageView: View {
                             
                        
                     }
-                    .frame(width: 165, height: 60)
+                    .frame(width: 165, height: 50)
                     .background(
                     RoundedRectangle(
                     cornerRadius: 15)
@@ -203,7 +203,7 @@ struct averageView: View {
                 
                 
             }
-        .frame(width: 360, height: 190)
+        .frame(width: 360, height: 170)
         .background(
         RoundedRectangle(
         cornerRadius: 15)

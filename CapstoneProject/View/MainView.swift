@@ -9,6 +9,9 @@ import SwiftUI
 
 struct MainView: View {
     
+    init(){UISegmentedControl.appearance().selectedSegmentTintColor = .black
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+    }
    
     var body: some View {
         TabView{
@@ -26,7 +29,7 @@ struct MainView: View {
                 .tabItem{
                     
                     Image(systemName: "waveform.path.ecg")
-                    Text("Stats")
+                    Text("Progress")
                     
                     
                 }
@@ -63,5 +66,7 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+            .preferredColorScheme(.light)
+            
     }
 }
