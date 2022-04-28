@@ -2,10 +2,14 @@
 import SwiftUI
 import Foundation
 import UIKit
+import Firebase
 
 
 
 struct HeaderView: View {
+    
+@AppStorage("log_Status") var status = false
+@StateObject var model = loginSignupViewModel()
     
 
     let date: Date
@@ -53,7 +57,7 @@ struct HeaderView: View {
                     
                 
                 VStack(alignment:.leading, spacing: 1) {
-                    Text("Hello Josh!")
+                    Text("Hello \(Auth.auth().currentUser?.email ?? "")")
                         .foregroundColor(.gray)
                         .font(.system(size: 12))
                     
@@ -64,19 +68,24 @@ struct HeaderView: View {
                 
                 
                 Spacer()
+                
+                
+                Button(action: model.logOut, label:  {
+                    Image(systemName: "gearshape.fill")
+                                .foregroundColor(.primary)
+                                .padding(8)
+                                .background(Color.white)
+                                .clipShape(Circle())
+                                .shadow(radius: 5)
+                                .font(.system(size: 20))
+                                .background(
+                                    Circle()
+                                        .stroke(Color.gray, lineWidth: 0)
+                                )
+                }).accessibilityIdentifier("logoutButton")
     
                       
-                      Image(systemName: "gearshape.fill")
-                                  .foregroundColor(.primary)
-                                  .padding(8)
-                                  .background(Color.white)
-                                  .clipShape(Circle())
-                                  .shadow(radius: 5)
-                                  .font(.system(size: 20))
-                                  .background(
-                                      Circle()
-                                          .stroke(Color.gray, lineWidth: 0)
-                                  )
+                     
                 
                 
                 Spacer().frame(width: 15)

@@ -1,95 +1,124 @@
 
 
 import SwiftUI
+import Firebase
 
 
 
 struct LoginView: View {
    //Calling Model.
-    @StateObject var model = loginSignupData()
+    
+@StateObject var model = loginSignupViewModel()
+@AppStorage("log_Status") var status = false
     
     var body: some View {
-        VStack(){
-            
-            Spacer()
-            //Signup Welcome.
-            Text("Welcome\nSign in!")
-                .bold()
-                .font(.largeTitle)
-                .frame(width: 360, height: 100, alignment: .leading)
-                .padding(.horizontal)
-            
-            
-            VStack(spacing:15){
-                
-                
-           //Custom Text fields with unique placeholders.
-            CustomTextField(placeholder: "Email", inputtext: $model.password)
-                
-            
         
-            //password textfield which will be secured with if else statement in custom building of view.
-            CustomTextField(placeholder: "Password", inputtext: $model.email)
-                
-                
-       
+        
 
+
+        ZStack {
+            VStack(){
+                
+                Spacer()
+                //Signup Welcome.
+                Text("Welcome\nSign in!")
+                    .bold()
+                    .font(.largeTitle)
+                    .frame(width: 360, height: 100, alignment: .leading)
+                    .padding(.horizontal)
+                
+                
+                VStack(spacing:15){
+                    
+                    
+               //Custom Text fields with unique placeholders.
+                CustomTextField(placeholder: "Email", inputtext: $model.loginemail).accessibilityIdentifier("emailTextField")
+                    
+                
             
-        }
-            //Page stylings.
-            Spacer().frame(height:20)
-            
-            
-            Button(action: {}){
-                
-                
-                Text("LOGIN")
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-                    .frame(width: 360, height:50)
-                    .background(
-                        Color.black
-                    )
-                    .cornerRadius(5)
-       
-                
-                
+                //password textfield which will be secured with if else statement in custom building of view.
+                CustomTextField(placeholder: "Password", inputtext: $model.loginpassword).accessibilityIdentifier("passwordTextField")
+                    
+                    
+
             }
-            
-            Spacer().frame(height:20)
-            
-            HStack(){
+                //Page stylings.
+                Spacer().frame(height:20)
                 
                 
-                Text("Never used our app?")
-                
-                Spacer().frame(width:5)
-              
-                   
-                Button(action: {}){
+                Button(action: {model.login()}){
                     
                     
-                    Text("Join now!")
-                        .bold()
-                        .foregroundColor(.black)
+                    Text("LOGIN")
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .frame(width: 360, height:50)
+                        .background(
+                            Color.black
+                        )
+                        .cornerRadius(5)
+           
+                    
+                    
+                }.accessibilityIdentifier("LoginButton")
+                
+                Spacer().frame(height:20)
+            
+                
+                HStack(){
+                    
+                    
+                    Text("Never used our app?")
+                    
+                    Spacer().frame(width:5)
+                  
+                       
+                    Button(action: {model.isSignUp.toggle()}){
+                        
+                        
+                        Text("Join now!")
+                            .bold()
+                            .foregroundColor(.black)
+                        
+                    }
+                    .accessibilityIdentifier("signUpButton")
                     
                 }
                 
+            
+          
+                    
+                    Spacer()
+                    Button(action: model.resetPassword){
+                    Text("Forgot Password?")
+                        .font(.system(size: 15))
+                        .bold()
+                        .foregroundColor(.black)
+                    
+                    }
+                
+            
+                
             }
             
-            Spacer().frame(height:240)
+            if model.isLoading{
+                
+                LoadingView()
+            }
+          
+        }
+        .fullScreenCover(isPresented: $model.isSignUp) {
+            SignUpView(model: model)
+        } .alert(isPresented: $model.alert, content: {
             
-            
-            Text("Forgot Password?")
-                .font(.system(size: 15))
-                .bold()
-                .foregroundColor(.black)
-            
-       
-            
+            Alert(title: Text("Message"), message: Text(model.alertMsg), dismissButton: .destructive(Text("Ok")))
+        })
         }
     }
-}
+        
+       
+
+    
 
 
 struct CustomTextField: View {

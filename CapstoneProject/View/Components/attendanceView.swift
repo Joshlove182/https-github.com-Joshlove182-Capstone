@@ -116,7 +116,7 @@ struct attendanceView: View {
       
          
             
-            graphView(downloads: weekDownloads)
+            graphView(attendances: weekAttendances)
             
     
         

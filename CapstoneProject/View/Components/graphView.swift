@@ -9,7 +9,7 @@ import SwiftUI
 
 struct graphView: View {
     
-    var downloads: [Download]
+    var attendances: [Attendance]
     
     @GestureState var isDragging: Bool = false
     @State var offset : CGFloat = 0
@@ -22,10 +22,10 @@ struct graphView: View {
         
         HStack(spacing: 10){
             
-            ForEach(downloads){download in
+            ForEach(attendances){attendance in
                 
        
-                CardView(download: download)
+                CardView(attendance: attendance)
                 
                 
             }
@@ -56,16 +56,16 @@ struct graphView: View {
                     let draggingSpace = UIScreen.main.bounds.width - 60
                     
                     // Each block...
-                    let eachBlock = draggingSpace / CGFloat(downloads.count)
+                    let eachBlock = draggingSpace / CGFloat(attendances.count)
                     
                     // getting index...
                     let temp = Int(offset / eachBlock)
                     
                     // safe Wrapping index...
-                    let index = max(min(temp, downloads.count - 1), 0)
+                    let index = max(min(temp, attendances.count - 1), 0)
                     
                     // updating ID
-                    self.currentBarID = downloads[index].id
+                    self.currentBarID = attendances[index].id
                 })
                 .onEnded({ value in
                     
@@ -81,7 +81,7 @@ struct graphView: View {
     
     
     @ViewBuilder
-    func CardView(download: Download)-> some View{
+    func CardView(attendance: Attendance)-> some View{
         
         VStack(spacing:20){
             
@@ -92,14 +92,14 @@ struct graphView: View {
                 
                 RoundedRectangle(cornerRadius: 6)
                     .fill(Color.gray)
-                    .frame(height: (download.downloads / getMax()) * (size.height))
-                    .opacity(isDragging ? (currentBarID == download.id ? 1: 0.35) : 1)
+                    .frame(height: (attendance.attendances / getMax()) * (size.height))
+                    .opacity(isDragging ? (currentBarID == attendance.id ? 1: 0.35) : 1)
                     .overlay(
                     
-                        Text("\(Int(download.downloads))")
+                        Text("\(Int(attendance.attendances))")
                             .font(.callout)
                             .foregroundColor(.black)
-                            .opacity(isDragging && currentBarID == download.id ? 1 : 0)
+                            .opacity(isDragging && currentBarID == attendance.id ? 1 : 0)
                             .offset(y: -25)
                         
                         ,alignment: .top
@@ -112,8 +112,8 @@ struct graphView: View {
                 
             }
             
-            Text(download.day)
-                .foregroundColor(currentBarID == download.id ? .black : . gray)
+            Text(attendance.day)
+                .foregroundColor(currentBarID == attendance.id ? .black : . gray)
             
         }
         
@@ -129,11 +129,11 @@ struct graphView: View {
     
     func getMax() ->CGFloat{
         
-        let max = downloads.max {first, second in
-            return second.downloads > first.downloads
+        let max = attendances.max {first, second in
+            return second.attendances > first.attendances
         }
         
-        return max?.downloads  ?? 0
+        return max?.attendances  ?? 0
         
         
         
@@ -144,6 +144,6 @@ struct graphView: View {
 
 struct graphView_Previews: PreviewProvider {
     static var previews: some View {
-        graphView(downloads: weekDownloads)
+        graphView(attendances: weekAttendances)
     }
 }

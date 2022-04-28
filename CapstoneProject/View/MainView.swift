@@ -35,7 +35,7 @@ struct MainView: View {
                 }
             
             
-            Test()
+            TimetableView()
                 .tabItem{
                     
                     Image(systemName: "calendar.badge.clock")

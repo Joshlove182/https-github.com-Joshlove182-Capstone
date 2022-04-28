@@ -6,12 +6,48 @@
 //
 
 import SwiftUI
+import Firebase
+
 
 struct ContentView: View {
+    
+@AppStorage("log_Status") var status = false
+@StateObject var model = loginSignupViewModel()
+
+    
+   
+    
     var body: some View {
-      MainView()
-    }
-}
+       
+        
+        ZStack{
+            
+            if status{
+                
+               
+                   MainView()
+                    
+              
+            }
+            else{
+                
+                LoginView(model: model)
+            }
+        }
+            
+
+      
+           
+            
+        }
+        
+        
+        
+        
+        
+    
+
+
 
 
 
@@ -19,4 +55,5 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
 }

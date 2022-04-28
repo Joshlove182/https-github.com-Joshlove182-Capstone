@@ -15,7 +15,7 @@ struct LibraryView: View {
     var body: some View {
         
         VStack(){
-            Spacer().frame(height:12)
+            Spacer().frame(height:30)
             HeaderView()
             titleView(title:"Your Library")
         
