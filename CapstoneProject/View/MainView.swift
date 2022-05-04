@@ -9,10 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     
-    init(){UISegmentedControl.appearance().selectedSegmentTintColor = .black
-        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-    }
-   
+  
     var body: some View {
         TabView{
             
